@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  A First Post
-date: "2016-08-25 21:46:42"
+date: "2016-08-25 23:07:21"
 published: true
 tags: [example1, example2]
 ---
@@ -37,7 +37,7 @@ Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here'
 ```r
 diamonds %>% 
   ggplot(aes(x = carat, y = log(price), color=clarity)) +
-  geom_point(alpha=0.5, size=3, shape='diamond') +
+  geom_point(alpha=0.5, size=5) +
   theme_light() +
   ggtitle('A plot from the diamonds dataset')
 ```
