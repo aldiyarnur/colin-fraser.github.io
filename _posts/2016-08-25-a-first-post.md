@@ -1,32 +1,12 @@
 ---
 layout: post
 title:  A First Post
-date: "2016-08-25 21:28:17"
+date: "2016-08-25 21:46:42"
 published: true
 tags: [example1, example2]
 ---
 
 
-```r
-source('a-first-post.R')
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
 
 # Here's a cool post
 Your markdown here!
@@ -51,14 +31,15 @@ head(diamonds)
 
 ## What about a plot?
 
-**Here's a plot**.
+Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. Here's a plot. 
 
 
 ```r
 diamonds %>% 
   ggplot(aes(x = carat, y = log(price), color=clarity)) +
   geom_point(alpha=0.5, size=3, shape='diamond') +
-  theme_light()
+  theme_light() +
+  ggtitle('A plot from the diamonds dataset')
 ```
 
 ![plot of chunk unnamed-chunk-3](/figure/source/a-first-post/2016-08-25-a-first-post/unnamed-chunk-3-1.png)
