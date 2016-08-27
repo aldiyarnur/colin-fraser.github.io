@@ -42,7 +42,7 @@ But when you release your model into the wild, something awful happens. Not only
 
 And what’s frustrating is this: the culprit is usually an obvious little mistake that you made right at the very beginning of the project. You can spend five hundred hours building and tuning some fancy algorithm that leverages all of the state-of-the-art machine learning tools that we have available today, and it will all be for nothing if you screw up and allow data leakage into your training data from the start.
 
-### When is a data leaky?
+### When is a dataset leaky?
 
 Machine learning experts have struggled a little bit to come up with a single formal definition of leakage, and perhaps it is best understood first by example. This is a modified version of an example that is presented in *[Leakage in Data Mining: Formulation, Detection, and Avoidance](http://dl.acm.org/citation.cfm?id=2020496)*, which has many more examples and ideas on this topic if you’re interested. Suppose you’re a data scientist working at some kind of online store, and you’re trying to build a model to predict, based on past purchases, whether a customer is likely to buy jewelry. You gather a massive dataset containing purchase histories for every single customer who has ever shopped at the store, along with their total spend on each of the three product categories that the store sells. Maybe it looks something like this:
 
@@ -84,7 +84,7 @@ That’s a little bit of a hard question. It is undoubtedly true that the color 
 
 The answer to whether this is a leakage problem or not depends on how you expect your model to generalize. If you expect that the images that your model will be looking at have the property that all of the wolf images will have white backgrounds and all of the dog images won’t, then run with the one you’ve got. It works just fine. On the other hand, if you expect your model to know that a Chihuahua on a blanket is not a wolf, then you do have a leakage problem at the data collection stage. Some quirk about your data collection process gave the background of the image too much predictive power, and your model is using this quirk of the data to cheat on its predictions.
 
-## There’s no such thing as a time machine
+### There’s no such thing as a time machine
 
 The accidental introduction of time-travel into the data is probably the most common source of leakage in machine learning. Due to the way that data is often stored and aggregated, data that are generated at different times may be stored in the same place. A general rule might be: if X happened after Y, you shouldn’t build a model that uses X to predict Y. Claudia Perlich calls this the No Time Machine Condition (NTMC). A model that determines whether it rains at 9:00 AM as a function of whether the road is wet at 9:05 AM might be very accurate, but it will also be very useless.
 
@@ -111,7 +111,7 @@ But this seems like it’s probably the exact opposite of reality! The data coll
 
 Such is the treachery of leakage.
 
-## What can you do?
+### What can you do?
 I’m going to go out on a limb and claim that most sources of leakage are violations of NTMC, and modelers should be vigilant in ensuring that they are not accidentally introducing time travel into their models. Predictive modelling is usually (but not always) about using today’s data to predict what will happen tomorrow, but since training data is almost always collected after the fact, it is very easy to overlook the temporal sequence of the events that generate the data. This oversight can be huge.
 
 In NTMC cases, the fix is straightforward, at least in principle: somehow or another, your dataset needs a time dimension. In the example of the online store, if the dataset had been split into two time periods, where purchases (including jewelry) in time period 1 are used to predict whether a customer purchases jewelry in time period 2, the leakage problem disappears. Moreover, it’s usually the case that the more time information you can provide, the better. If the dataset in the churn prediction model could be rearranged into a panel format, where we have multiple observations across time for each customer, not only could the leakage issue be resolved, but a much wider array of potential features and models could be considered.

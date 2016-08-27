@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Computer Modern Serif", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -45,28 +45,38 @@ html {
   }
 }
 
-/* Use computer modern */
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunss.otf');
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunsx.otf');
-    font-weight: bold;
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunsi.otf');
-    font-style: italic, oblique;
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunbxo.otf');
-    font-weight: bold;
-    font-style: italic, oblique;
-  }
+p {
+  font-family: "Computer Modern Serif", serif;
+}
 
+h1 {
+  font-family: "Computer Modern Bright";
+  font-weight: lighter;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Computer Modern Concrete";
+  font-weight: normal;
+}
+
+.post-date {
+  font-family: "Computer Modern Serif";
+}
+
+.highlight {
+  background-color: #e9edde;
+}
+
+code {
+  background-color: #e9edde;
+  font-family: "Computer Modern Typewriter";
+}
+
+.content code {
+  padding: 0em;
+  padding-bottom: 0;
+  color: black;
+}
 
 /*
  * Sidebar
@@ -101,8 +111,9 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Computer Modern";
+  font-family: "Computer Modern Serif", sans-serif;
   font-size: 3.25rem;
+  font-weight: bold;
 }
 
 /* Sidebar nav */
@@ -112,6 +123,7 @@ html {
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
+  font-family: "Computer Modern Sans", sans-serif;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
@@ -148,8 +160,9 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
-.content p {
-  font-family: "Computer Modern", serif;
+.content table {
+  font-family: "Computer Modern Typewriter";
+  font-size: 0.75rem;
 }
 
 @media (min-width: 48em) {
