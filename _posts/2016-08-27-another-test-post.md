@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Another test post
-date: "2016-08-27 15:10:43"
+date: "2016-08-27 15:24:08"
 published: true
 tags: [example1, example2]
 ---
