@@ -1,33 +1,16 @@
 ---
 layout: post
 title:  Another test post
-date: "2016-08-27 15:24:08"
+date: "2016-08-27 15:38:33"
 published: true
 tags: [example1, example2]
 ---
+What's up with equations?
 
-I want to figure out what's going on with lists.
+Here's one: \\(x^2 + y^2 = z^2\\). That should be inline. Here's one with trickier characters in it: \\(E[X \mid Y] = \int _{-\infty} ^ \infty \frac{xf(x,y)}{f(y)}dy \\). 
 
-* Here's a list
-* Here's another item in the list
-  + Here's a sub item
-  + here's another sub item
-* back to main
+And on a single line:
 
-### And an ordered list?
+$$\sum _{n=1}^\infty \frac{1}{n^2} = \frac{\pi}{6}$$
 
-1. Item 1
-2. Item 2
-3. Item 3
-  + Sub item
-
-Also, equations? \\(E\left[Y\mid X\right] = \int_{-\infty}^\infty \frac{yf(x,y)}{f(x)} dy \\)
-
-$$E\left[Y\mid X\right] = \int_{-\infty}^\infty \frac{yf(x,y)}{f(x)} dy$$
-
-
-```r
-plot(1:10)
-```
-
-![plot of chunk unnamed-chunk-1](/figure/source/another-test-post/2016-08-27-another-test-post/unnamed-chunk-1-1.png)
+Let's see what we get.
