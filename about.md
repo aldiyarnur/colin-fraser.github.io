@@ -3,28 +3,10 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+<img src="/images/image.jpg" width="300px"  style="float: left; padding-right: 30px;"/>My name is Colin. I live and work in Vancouver, BC. I'm a data scientist at my job where I work on things like customer analytics and building models of customer behaviour, as well as experimental design. I do a whole lot of my work with R, but I also like doing things with Python. I'll write about all kinds of different things here.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+If you want to get in touch with me, you can email me at colin dot r dot fraser at gmail dot com, [tweet at me](twitter.com/colin_fraser), or, I don't know, it's pretty easy to get in touch with people on the internet these days.
 
-There are currently two themes built on Poole:
+### About this blog
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+This blog runs on [Jekyll](http://jekyllrb.com), and the theme is a bastardization of [@mdo](https://twitter.com/mdo)'s attractive [Hyde](http://hyde.getpoole.com). I write everything in [Rmarkdown](http://rmarkdown.rstudio.com/) through Rstudio, which I figured out how to do with [these instructions](https://brendanrocks.com/blogging-with-rmarkdown-knitr-jekyll/). It's a bit of a Rube Goldberg contraption but once you get it set up it's really nice actually.
