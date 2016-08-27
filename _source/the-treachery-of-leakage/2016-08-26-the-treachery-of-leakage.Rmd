@@ -67,7 +67,7 @@ Information is in some sense leaking from the features — information that 
 
 What information does your model have the right to see? That can be a tricky question to answer, but it is the key spotting and correcting leakage. Leakage is present when your features contain information that your model should not legitimately be allowed to use. But legitimacy is not always obvious, or even unambiguously defined. For instance, consider the case of a classifier that looks at an image and decides whether it contains a wolf or a dog. You train it on some images like these.
 
-![Wolf]({{ site.baseurl }}/images/wolf1.jpeg)
+![Wolf]({{ site.url }}/images/wolf1.jpeg)
 
 ![Dog]({{ site.url }}/images/dog1.jpeg)
 
