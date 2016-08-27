@@ -21,7 +21,7 @@ I want to figure out what's going on with lists.
 3. Item 3
   + Sub item
 
-Also, equations? $E\left[Y\mid X\right] = \int_{-\infty}^\infty \frac{yf(x,y)}{f(x)} dy$
+Also, equations? \\(E\left[Y\mid X\right] = \int_{-\infty}^\infty \frac{yf(x,y)}{f(x)} dy \\)
 
 $$E\left[Y\mid X\right] = \int_{-\infty}^\infty \frac{yf(x,y)}{f(x)} dy$$
 

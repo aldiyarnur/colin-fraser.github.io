@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Another test post
-date: "2016-08-27 15:03:31"
+date: "2016-08-27 15:10:43"
 published: true
 tags: [example1, example2]
 ---
@@ -21,7 +21,7 @@ I want to figure out what's going on with lists.
 3. Item 3
   + Sub item
 
-Also, equations? $E\left[Y\mid X\right] = \int_{-\infty}^\infty \frac{yf(x,y)}{f(x)} dy$
+Also, equations? \\(E\left[Y\mid X\right] = \int_{-\infty}^\infty \frac{yf(x,y)}{f(x)} dy \\)
 
 $$E\left[Y\mid X\right] = \int_{-\infty}^\infty \frac{yf(x,y)}{f(x)} dy$$
 
