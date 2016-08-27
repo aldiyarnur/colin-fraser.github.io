@@ -67,13 +67,13 @@ Information is in some sense leaking from the features — information that 
 
 What information does your model have the right to see? That can be a tricky question to answer, but it is the key spotting and correcting leakage. Leakage is present when your features contain information that your model should not legitimately be allowed to use. But legitimacy is not always obvious, or even unambiguously defined. For instance, consider the case of a classifier that looks at an image and decides whether it contains a wolf or a dog. You train it on some images like these.
 
-![Wolf](images/wolf1.jpeg)
+![Wolf]({{ site.baseurl }}/images/wolf1.jpeg)
 
-![Dog](images/dog1.jpeg)
+![Dog]({{ site.url }}/images/dog1.jpeg)
 
-![Wolf](images/wolf2.jpeg)
+![Wolf]({{ site.url }}/images/wolf2.jpeg)
 
-![Dog](images/dog3.jpeg)
+![Dog]({{ site.url }}/images/dog3.jpeg)
 
 Your classifier seems to do quite well, identifying most wolves and most dogs in your test set. However, on further investigation (perhaps with a little help from the LIME technique described in the paper that I stole this example from), you determine that your model has simply decided that a “wolf” is a thing on a white background and a “dog” is a thing on a green background. The correct prediction is fully specified by the background color of the image. Is this leakage?
 
