@@ -45,6 +45,28 @@ html {
   }
 }
 
+/* Use computer modern */
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://spratt.github.io/Computer-Modern/cmunss.otf');
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://spratt.github.io/Computer-Modern/cmunsx.otf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://spratt.github.io/Computer-Modern/cmunsi.otf');
+    font-style: italic, oblique;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://spratt.github.io/Computer-Modern/cmunbxo.otf');
+    font-weight: bold;
+    font-style: italic, oblique;
+  }
+
 
 /*
  * Sidebar
@@ -70,11 +92,6 @@ html {
   }
 }
 
-@font-face {
-  font-family: "Computer Modern";
-  src: url('http://spratt.github.io/Computer-Modern/cmunss.otf');
-}
-
 /* Sidebar links */
 .sidebar a {
   color: #fff;
@@ -84,7 +101,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Computer Modern", serif;
+  font-family: "Computer Modern";
   font-size: 3.25rem;
 }
 
@@ -129,6 +146,10 @@ a.sidebar-nav-item:focus {
 .content {
   padding-top:    4rem;
   padding-bottom: 4rem;
+}
+
+.content p {
+  font-family: "Computer Modern", serif;
 }
 
 @media (min-width: 48em) {
