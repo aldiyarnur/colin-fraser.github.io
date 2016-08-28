@@ -26,6 +26,14 @@
         {% endif %}
       {% endfor %}
     </nav>
+    <div class="sidebar-recent">
+    <h2>Recent Posts</h2>
+    <ul>
+    {% for post in site.posts offset: 0 limit: 8  %}
+      <a href="{{ post.url }}"><li>{{ post.title }}</li><ul><li>{{post.date | date: "%Y-%m-%d""}}</li></ul></a>
+    {% endfor %}
+    </ul>
+    </div>
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>
