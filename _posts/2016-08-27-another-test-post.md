@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Another test post
-date: "2016-08-27 17:35:15"
+date: "2016-08-27 18:13:47"
 published: true
 tags: [example1, example2]
 figcaption: true

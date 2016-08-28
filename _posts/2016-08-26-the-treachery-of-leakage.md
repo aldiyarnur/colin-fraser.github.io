@@ -2,7 +2,7 @@
 layout: post
 title:  The Treachery of Leakage
 subtitle: How to avoid letting a model cheat on you and break your heart
-date: "2016-08-27 17:55:11"
+date: 2016-08-26
 published: true
 tags: [data science done badly]
 comments: true
