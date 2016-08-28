@@ -5,6 +5,7 @@ subtitle: How to avoid letting a model cheat on you and break your heart
 date: "`r Sys.time()`"
 published: true
 tags: [data science done badly]
+comments: true
 ---
 
 ```{r, include=FALSE}
@@ -68,19 +69,36 @@ Information is in some sense *leaking* from the features — information tha
 
 What information does your model have the right to see? That can be a tricky question to answer, but it is the key spotting and correcting leakage. Leakage is present when your features contain information that your model should not legitimately be allowed to use. But legitimacy is not always obvious, or even unambiguously defined. For instance, consider the case of a classifier that looks at an image and decides whether it contains a wolf or a dog. You train it on some images like these.
 
-![Wolf](/images/wolf1.jpeg)
+<figure>
+<img src="/images/wolf1.jpeg" alt = "Wolf" />
+<figcaption>Wolf</figcaption>
+</figure>
 
-![Dog](/images/dog1.jpeg)
 
-![Wolf](/images/wolf2.jpeg)
+<figure>
+<img src="/images/dog1.jpeg" alt = "Dog" />
+<figcaption>Dog</figcaption>
+</figure>
 
-![Dog](/images/dog3.jpeg)
+<figure>
+<img src="/images/wolf2.jpeg" alt = "Wolf" />
+<figcaption>Wolf</figcaption>
+</figure>
+
+
+<figure>
+<img src="/images/dog3.jpeg" alt = "Dog" />
+<figcaption>Dog</figcaption>
+</figure>
 
 Your classifier seems to do quite well, identifying most wolves and most dogs in your test set. However, on further investigation (perhaps with a little help from the LIME technique described in [the paper that I stole this example from](http://arxiv.org/pdf/1602.04938v1.pdf)), you determine that your model has simply decided that a “wolf” is a thing on a white background and a “dog” is a thing on a green background. The correct prediction is fully specified by the background color of the image. Is this leakage?
 
 That’s a little bit of a hard question. It is undoubtedly true that the color of the background of an image can help to predict the foreground, and humans performing this same classification task probably use the background as a feature in their own assessments. The background is a legitimate feature that rational observer would use to determine the content of an image.
 
-![Not a wolf](/images/dog4.jpeg)
+<figure>
+<img src="/images/dog4.jpeg" alt = "A chihuahua on a blanket" />
+<figcaption>Not a wolf.</figcaption>
+</figure>
 
 The answer to whether this is a leakage problem or not depends on how you expect your model to generalize. If you expect that the images that your model will be looking at have the property that all of the wolf images will have white backgrounds and all of the dog images won’t, then run with the one you’ve got. It works just fine. On the other hand, if you expect your model to know that a Chihuahua on a blanket is not a wolf, then you do have a leakage problem at the data collection stage. Some quirk about your data collection process gave the background of the image too much predictive power, and your model is using this quirk of the data to cheat on its predictions.
 

@@ -78,6 +78,11 @@ code {
   color: black;
 }
 
+figcaption {
+  font-size: 0.6rem;
+  text-align: center;
+}
+
 /*
  * Sidebar
  *
