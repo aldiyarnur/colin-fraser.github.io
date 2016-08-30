@@ -25,4 +25,4 @@ diamonds %>%
 
 ![plot of chunk unnamed-chunk-1](/figure/source/about/about/unnamed-chunk-1-1.png)
 
-And since this is all in a github repository, you can find the .Rmd source for any post, which I think is cool. For instance, have a look at the source for this post [here](/about.Rmd).
+And since this is all in a github repository, you can find the .Rmd source for any post, which I think is cool. For instance, have a look at the source for this post [here](https://github.com/colin-fraser/colin-fraser.github.io/tree/master/_source/about/).
